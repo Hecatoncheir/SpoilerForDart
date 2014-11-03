@@ -2,27 +2,36 @@ library spoiler;
 
 import 'dart:html';
 
-class Spoiler {
-	String Name;
-  static Style = appendStyle();
+class SpoilerFor {
 
-  Spoiler(String element){
+  SpoilerFor(String element, {type:closed}){
   	List spElements = querySelectorAll('$element');
-  	spElements.forEach((Element el){
-  		String atribute = el.getAttribute('name');
+  	addStyleToDocument();
+  	addSpoilerNameStyle(spElements);
+	}
 
-  		if(atribute !== null){
-
-      }
-
-  	});
-  }
 }
 
+addSpoilerNameStyle(List spElements){
+	spElements.forEach((element){
+		element.
+	});
+}
+
+// Проверка уже имеющихся стилей
+addStyleToDocument(){
+
+}
+
+// Добавление стилей в документ
 appendStyle(){
-  // querySelector('body').append();
-}
+	Element style = new Element.tag('link');
+	style.type = 'text/css';
+	style.rel = 'stylesheet';
+	style.href = 'packages/spoiler/spoiler.css';
 
+  querySelector('head').append(style);
+}
 
 
 makeContentsClosed(){}
