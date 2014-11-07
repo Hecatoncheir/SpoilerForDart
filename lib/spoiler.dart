@@ -14,7 +14,7 @@ class SpoilerFor {
 
 addSpoilerNameStyle(List spElements){
 	spElements.forEach((element){
-		element.
+		
 	});
 }
 
