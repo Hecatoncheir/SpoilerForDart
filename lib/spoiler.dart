@@ -4,34 +4,28 @@ import 'dart:html';
 
 class SpoilerFor {
 
-  SpoilerFor(String element, {type:closed}){
+  SpoilerFor(String element){
   	List spElements = querySelectorAll('$element');
   	addStyleToDocument();
-  	addSpoilerNameStyle(spElements);
 	}
 
 }
 
-addSpoilerNameStyle(List spElements){
-	spElements.forEach((element){
-		
-	});
-}
-
 // Проверка уже имеющихся стилей
 addStyleToDocument(){
-
+	var style = createStyle();
+	HeadElement Head = querySelector('head');
+	List hasStyle = Head.querySelectorAll('link[href="packages/spoiler/spoiler.css"]');
+	if(hasStyle.length < 1){
+		Head.append(style);
+	}
 }
 
-// Добавление стилей в документ
-appendStyle(){
+// Создание ссылки на стиль библиотеки
+createStyle(){
 	Element style = new Element.tag('link');
-	style.type = 'text/css';
-	style.rel = 'stylesheet';
-	style.href = 'packages/spoiler/spoiler.css';
-
-  querySelector('head').append(style);
+  	      style..type = 'text/css'
+               ..rel = 'stylesheet'
+               ..href = 'packages/spoiler/spoiler.css';
+	return style;
 }
-
-
-makeContentsClosed(){}
