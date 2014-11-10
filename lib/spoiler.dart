@@ -13,12 +13,14 @@ class SpoilerFor {
 
 // Проверка уже имеющихся стилей
 addStyleToDocument(){
-	var style = createStyle();
 	HeadElement Head = querySelector('head');
 	List hasStyle = Head.querySelectorAll('link[href="packages/spoiler/spoiler.css"]');
+
 	if(hasStyle.length < 1){
+  	var style = createStyle();
 		Head.append(style);
 	}
+
 }
 
 // Создание ссылки на стиль библиотеки
