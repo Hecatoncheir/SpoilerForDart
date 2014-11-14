@@ -16,16 +16,17 @@ addStyleToDocument(){
 	HeadElement Head = querySelector('head');
 	List hasStyle = Head.querySelectorAll('link[href="packages/spoiler/spoiler.css"]');
 	if(hasStyle.length < 1){
-		var style = createStyle();
+  	var style = createStyle();
 		Head.append(style);
 	}
+
 }
 
 // Создание ссылки на стиль библиотеки
 createStyle(){
 	Element style = new Element.tag('link');
-  	      style..type = 'text/css'
-               ..rel = 'stylesheet'
-               ..href = 'packages/spoiler/spoiler.css';
+	style..type = 'text/css'
+			 ..rel = 'stylesheet'
+			 ..href = 'packages/spoiler/spoiler.css';
 	return style;
 }
