@@ -6,13 +6,13 @@ part 'package:spoiler/classes.dart';
 class SpoilerTag{
 	SpoilerTag(){
 		new SpoilerStyle();
-		document.registerElement('cool-spoiler', CoolSpoiler);
+		document.registerElement('cool-spoiler', CoolSpoiler, extendsTag: 'div');
 	}
 }
 
-class CoolSpoiler extends Element {
+class CoolSpoiler extends DivElement {
 	factory CoolSpoiler(){
-		return new Element.tag('cool-spoiler');
+		return new DivElement();
 	}
 
 	CoolSpoiler.created() : super.created(){}
