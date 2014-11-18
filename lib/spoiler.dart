@@ -11,12 +11,13 @@ class SpoilerTag{
 }
 
 class CoolSpoiler extends DivElement {
+	Element tag = new DivElement();
 
 	factory CoolSpoiler(){
-		return new DivElement();
+		return tag;
 	}
 
 	CoolSpoiler.created() : super.created(){
-		setAttribute('name','Open/Close');
+		tag.setAttribute('name','Open/Close');
 	}
 }
