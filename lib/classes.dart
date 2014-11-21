@@ -1,7 +1,6 @@
 part of spoiler;
 
 // Проверка уже имеющихся стилей
-
 class SpoilerStyle {
   static final style = new _Style();
   static final Head = querySelector('head');

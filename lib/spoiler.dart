@@ -3,13 +3,14 @@ library spoiler;
 import 'dart:html';
 part 'package:spoiler/classes.dart';
 
-class SpoilerTag{
-	SpoilerTag(){
+class CoolSpoilerTag{
+	CoolSpoilerTag(){
 		new SpoilerStyle();
 		document.registerElement('cool-spoiler', CoolSpoiler, extendsTag: 'div');
 	}
 }
 
+//Create new tag
 class CoolSpoiler extends DivElement {
 	Element tag = new DivElement();
 
