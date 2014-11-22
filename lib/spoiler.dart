@@ -6,19 +6,25 @@ part 'package:spoiler/classes.dart';
 class CoolSpoilerTag{
 	CoolSpoilerTag(){
 		new SpoilerStyle();
-		document.registerElement('cool-spoiler', CoolSpoiler, extendsTag: 'div');
+		RegisterTags();
 	}
 }
 
 //Create new tag
-class CoolSpoiler extends DivElement {
+class CoolSpoilerTag extends DivElement {
 	Element tag = new DivElement();
 
-	factory CoolSpoiler(){
+	factory CoolSpoilerTag(){
 		return tag;
 	}
 
 	CoolSpoiler.created() : super.created(){
 		tag.setAttribute('name','Open/Close');
 	}
+}
+
+//Register new HTML tags in DOM
+Function RegisterTags(){
+	document.registerElement('cool-spoiler', CoolSpoilerTag, extendsTag: 'div');
+	document.registerElement('spoiler-name', CoolSpoilerTag, extendsTag: 'div');
 }
