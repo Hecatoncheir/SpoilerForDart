@@ -1,3 +1,7 @@
-cool-spoiler * {
+cool-spoiler:not([type='open']) {
     display:none;
+}
+
+spoiler-name {
+    display: block;
 }
