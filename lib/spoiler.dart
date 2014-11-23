@@ -7,6 +7,7 @@ class CoolSpoilerTag{
 	CoolSpoilerTag(){
 		new SpoilerStyle();
 		RegisterTags();
+		MakeSpoilerMechanism();
 	}
 }
 
@@ -28,7 +29,7 @@ class SpoilerTag extends DivElement {
 }
 
 //For new spoiler name tag
-class SpoilerNameTag extends SpoilerTag {
+class SpoilerNameTag extends DivElement {
 
 	factory SpoilerNameTag(){
 		return new DivElement();

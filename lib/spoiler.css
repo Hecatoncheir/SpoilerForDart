@@ -1,7 +1,15 @@
+cool-spoiler {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
 cool-spoiler:not([type='open']) {
-    display:none;
+    height: 0;
+    max-height: 0;
+    display: none;
 }
 
 spoiler-name {
-    display: block;
+    display: inline-block;
 }

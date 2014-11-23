@@ -1,6 +1,6 @@
 part of spoiler;
 
-// Проверка уже имеющихся стилей
+// Добавления стиля в документ
 class SpoilerStyle {
   static final style = new _Style();
   static final Head = querySelector('head');
@@ -20,4 +20,18 @@ class _Style {
         ..rel = 'stylesheet'
         ..href = 'packages/spoiler/spoiler.css';
   }
+}
+
+//Получение всех нужных тегов из документа
+Function MakeSpoilerMechanism(){
+  List spoilersInDom = querySelectorAll('cool-spoiler');
+
+  spoilersInDom.forEach((spoiler){
+    String nameAttribute = spoiler.getAttribute('name');
+
+    if(nameAttribute != null){
+      spoiler.appendHtml('<spoiler-name>$nameAttribute</spoiler-name>');
+    }
+
+  });
 }
