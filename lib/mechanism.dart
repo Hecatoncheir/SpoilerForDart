@@ -4,6 +4,7 @@ part of spoiler;
 Function MakeSpoilerMechanism(){
   List spoilersInDom = querySelectorAll('cool-spoiler');
   insertSpoilerNameInDocument(spoilersInDom);
+  addingEventHendler(spoilersInDom);
 }
 
 //Добавление имен из тегов в разметку документа
@@ -18,4 +19,14 @@ Function insertSpoilerNameInDocument(List Spoilers){
 
   });
 
+}
+
+//Добавление обработки события нажатия на заголовки
+Function addingEventHendler(List Spoilers){
+  Spoilers.forEach((spoiler){
+    spoiler.onClick.listen((event){
+//      String typeAttribute = event.target.getAttribute('type');
+
+    });
+  });
 }
