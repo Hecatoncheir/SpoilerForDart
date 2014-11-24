@@ -21,17 +21,3 @@ class _Style {
         ..href = 'packages/spoiler/spoiler.css';
   }
 }
-
-//Получение всех нужных тегов из документа
-Function MakeSpoilerMechanism(){
-  List spoilersInDom = querySelectorAll('cool-spoiler');
-
-  spoilersInDom.forEach((spoiler){
-    String nameAttribute = spoiler.getAttribute('name');
-
-    if(nameAttribute != null){
-      spoiler.appendHtml('<spoiler-name>$nameAttribute</spoiler-name>');
-    }
-
-  });
-}

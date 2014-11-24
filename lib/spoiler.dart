@@ -1,7 +1,9 @@
 library spoiler;
 
 import 'dart:html';
+
 part 'package:spoiler/classes.dart';
+part 'package:spoiler/mechanism.dart';
 
 class CoolSpoilerTag{
 	CoolSpoilerTag(){
