@@ -25,7 +25,7 @@ Function insertSpoilerNameInDocument(List Spoilers){
 Function addingEventHendler(List Spoilers){
   Spoilers.forEach((spoiler){
     spoiler.onClick.listen((event){
-//      String typeAttribute = event.target.getAttribute('type');
+      String typeAttribute = event.target.parent.getAttribute('type');
 
     });
   });

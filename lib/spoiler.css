@@ -4,12 +4,18 @@ cool-spoiler {
     height: auto;
 }
 
-cool-spoiler:not([type='open']) {
-    height: 0;
-    max-height: 0;
-    display: none;
-}
+/*cool-spoiler:not([type='open']) {*/
+    /*height: 0;*/
+    /*max-height: 0;*/
+    /*display: none;*/
+/*}*/
 
-spoiler-name {
-    display: inline-block;
-}
+/*cool-spoiler[type='open'] > spoiler-name {*/
+    /*display: inline-block;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*cool-spoiler[type='close'] > spoiler-name {*/
+    /*display: inline-block;*/
+    /*cursor: pointer;*/
+/*}*/
